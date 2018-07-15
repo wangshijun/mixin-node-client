@@ -2,15 +2,20 @@
   "name": "mixin-node-sdk",
   "description": "Node.js SDK for Mixin Network",
   "version": "0.1.0",
-  "author": "wangshijun <wangshijun2010@gmail.com> ()",
+  "author": "wangshijun <wangshijun2010@gmail.com>",
   "bugs": {
     "url": "https://github.com/wangshijun/mixin-node-sdk/issues",
     "email": "wangshijun2010@gmail.com"
   },
   "contributors": [
-    "wangshijun <wangshijun2010@gmail.com> ()"
+    "wangshijun <wangshijun2010@gmail.com>"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "axios": "^0.18.0",
+    "int64-buffer": "^0.1.10",
+    "jsonwebtoken": "^8.3.0",
+    "ws": "^5.2.2"
+  },
   "ava": {
     "failFast": true,
     "verbose": true
@@ -20,6 +25,7 @@
     "ava": "^0.22.0",
     "codecov": "^2.3.0",
     "cross-env": "^5.0.5",
+    "debug": "^3.1.0",
     "eslint": "^4.5.0",
     "eslint-config-prettier": "latest",
     "eslint-plugin-prettier": "latest",
@@ -27,8 +33,6 @@
     "lint-staged": "^4.0.4",
     "nyc": "^11.1.0",
     "prettier": "^1.6.1",
-    "remark-cli": "^4.0.0",
-    "remark-preset-github": "^0.0.6",
     "xo": "latest"
   },
   "engines": {
@@ -45,11 +49,7 @@
   "license": "MIT",
   "lint-staged": {
     "*.{js,jsx,mjs,ts,tsx,css,less,scss,json,graphql}": [
-      "prettier --write --single-quote --trailing-comma none",
-      "git add"
-    ],
-    "*.md": [
-      "remark . -qfo",
+      "prettier",
       "git add"
     ]
   },
@@ -63,11 +63,6 @@
       "lcov",
       "html",
       "text"
-    ]
-  },
-  "remarkConfig": {
-    "plugins": [
-      "preset-github"
     ]
   },
   "repository": {
@@ -86,9 +81,13 @@
       "prettier/prettier": [
         "error",
         {
+          "printWidth": 120,
+          "tabWidth": 2,
+          "trailingComma": "es5",
+          "jsxBracketSameLine": true,
+          "semi": true,
           "singleQuote": true,
-          "bracketSpacing": true,
-          "trailingComma": "none"
+          "bracketSpacing": true
         }
       ],
       "max-len": [
@@ -106,7 +105,7 @@
   },
   "scripts": {
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
-    "lint": "xo && remark . -qfo",
+    "lint": "xo",
     "precommit": "lint-staged && npm test",
     "test": "npm run lint && npm run test-coverage",
     "test-coverage": "cross-env NODE_ENV=test nyc ava"
