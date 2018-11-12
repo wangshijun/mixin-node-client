@@ -7,16 +7,14 @@
 [![made with lass](https://img.shields.io/badge/made_with-lass-95CC28.svg)](https://lass.js.org)
 [![license](https://img.shields.io/github/license/wangshijun/mixin-node-sdk.svg)](LICENSE)
 
-> Node.js SDK for Mixin Network
-
+> Node.js SDK for Mixin Network, heavily inspired by [mixin-node](https://www.npmjs.com/package/mixin-node)
 
 ## Table of Contents
 
-* [Install](#install)
-* [Usage](#usage)
-* [Contributors](#contributors)
-* [License](#license)
-
+- [Install](#install)
+- [Usage](#usage)
+- [Contributors](#contributors)
+- [License](#license)
 
 ## Install
 
@@ -32,7 +30,6 @@ npm install mixin-node-sdk
 yarn add mixin-node-sdk
 ```
 
-
 ## Usage
 
 ```js
@@ -44,21 +41,17 @@ console.log(mixinNodeSdk.renderName());
 // script
 ```
 
-
 ## Contributors
 
 | Name           |
 | -------------- |
 | **wangshijun** |
 
-
 ## License
 
 [MIT](LICENSE) © wangshijun
 
-
-## 
+##
 
 [npm]: https://www.npmjs.com/
-
 [yarn]: https://yarnpkg.com/

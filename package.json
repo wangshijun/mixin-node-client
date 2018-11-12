@@ -78,10 +78,11 @@
       "sourceType": "script"
     },
     "rules": {
+      "unicorn/number-literal-case": "off",
       "prettier/prettier": [
         "error",
         {
-          "printWidth": 120,
+          "printWidth": 240,
           "tabWidth": 2,
           "trailingComma": "es5",
           "jsxBracketSameLine": true,
@@ -93,7 +94,7 @@
       "max-len": [
         "error",
         {
-          "code": 80,
+          "code": 120,
           "ignoreUrls": true
         }
       ],
