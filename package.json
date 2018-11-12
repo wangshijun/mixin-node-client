@@ -1,10 +1,10 @@
 {
-  "name": "mixin-node-sdk",
+  "name": "mixin-node-client",
   "description": "Node.js SDK for Mixin Network",
   "version": "0.1.0",
   "author": "wangshijun <wangshijun2010@gmail.com>",
   "bugs": {
-    "url": "https://github.com/wangshijun/mixin-node-sdk/issues",
+    "url": "https://github.com/wangshijun/mixin-node-client/issues",
     "email": "wangshijun2010@gmail.com"
   },
   "contributors": [
@@ -38,7 +38,7 @@
   "engines": {
     "node": ">=8.3"
   },
-  "homepage": "https://github.com/wangshijun/mixin-node-sdk",
+  "homepage": "https://github.com/wangshijun/mixin-node-client",
   "keywords": [
     "mixin",
     "blockchain",
@@ -67,7 +67,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wangshijun/mixin-node-sdk"
+    "url": "https://github.com/wangshijun/mixin-node-client"
   },
   "xo": {
     "extends": "prettier",
