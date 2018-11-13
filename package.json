@@ -24,7 +24,6 @@
   "devDependencies": {
     "auto-bind": "^1.1.0",
     "ava": "^0.22.0",
-    "codecov": "^2.3.0",
     "cross-env": "^5.0.5",
     "debug": "^3.1.0",
     "eslint": "^4.5.0",
@@ -106,7 +105,7 @@
     "space": true
   },
   "scripts": {
-    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov",
     "lint": "xo",
     "precommit": "lint-staged && npm test",
     "test": "npm run lint && npm run test-coverage",
