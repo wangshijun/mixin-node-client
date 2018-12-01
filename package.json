@@ -107,7 +107,7 @@
   "scripts": {
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov",
     "lint": "xo",
-    "precommit": "lint-staged && npm test",
+    "precommit": "lint-staged && npm run test-coverage",
     "test": "npm run lint && npm run test-coverage",
     "test-coverage": "cross-env NODE_ENV=test nyc ava"
   }
