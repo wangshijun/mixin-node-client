@@ -41,6 +41,11 @@ console.log(mixinNodeSdk.renderName());
 // script
 ```
 
+## TODO List
+
+[ ] create conversation
+[ ] network related API
+
 ## Contributors
 
 | Name           |
