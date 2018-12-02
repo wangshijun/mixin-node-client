@@ -2187,6 +2187,11 @@ int64-buffer@^0.1.10:
   version "0.1.10"
   resolved "http://registry.npm.taobao.org/int64-buffer/download/int64-buffer-0.1.10.tgz#277b228a87d95ad777d07c13832022406a473423"
 
+interval-promise@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.npmjs.org/interval-promise/-/interval-promise-1.3.0.tgz#26fc4fbcd18605162d0dd012c2cc5657c4f8bc22"
+  integrity sha512-AebPZJ0o6D1jWg487njjrhfzBp6/hfmtWCMQhXr0SXD7Zg5RexQe4Y6joYiGieJziP7W7WEMQWxFKSbywXmhbw==
+
 invariant@^2.2.2:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.4.tgz#610f3c92c9359ce1db616e538008d23ff35158e6"
@@ -4659,9 +4664,10 @@ write@^0.2.1:
   dependencies:
     mkdirp "^0.5.1"
 
-ws@^5.2.2:
-  version "5.2.2"
-  resolved "http://registry.npm.taobao.org/ws/download/ws-5.2.2.tgz#dffef14866b8e8dc9133582514d1befaf96e980f"
+ws@^6.1.2:
+  version "6.1.2"
+  resolved "https://registry.npmjs.org/ws/-/ws-6.1.2.tgz#3cc7462e98792f0ac679424148903ded3b9c3ad8"
+  integrity sha512-rfUqzvz0WxmSXtJpPMX2EeASXabOrSMk1ruMOV3JBTBjo4ac2lDjGGsbQSyxj8Odhw5fBib8ZKEjDNvgouNKYw==
   dependencies:
     async-limiter "~1.0.0"
 
