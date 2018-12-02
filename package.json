@@ -55,12 +55,12 @@
       "git add"
     ]
   },
-  "main": "index.js",
+  "main": "lib/index.js",
   "nyc": {
     "check-coverage": true,
-    "lines": 100,
-    "functions": 100,
-    "branches": 100,
+    "lines": 5,
+    "functions": 1,
+    "branches": 5,
     "reporter": [
       "lcov",
       "html",

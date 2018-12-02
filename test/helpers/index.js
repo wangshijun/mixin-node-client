@@ -1,8 +1,9 @@
-const Script = require('../..');
+const { HttpClient } = require('../..');
+const config = require('../../examples/config');
 
 function beforeEach(t) {
-  const script = new Script({});
-  Object.assign(t.context, { script });
+  const client = new HttpClient(config);
+  Object.assign(t.context, { client });
 }
 
 function afterEach() {}
