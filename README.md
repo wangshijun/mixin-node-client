@@ -7,7 +7,7 @@
 [![made with lass](https://img.shields.io/badge/made_with-lass-95CC28.svg)](https://lass.js.org)
 [![license](https://img.shields.io/github/license/wangshijun/mixin-node-sdk.svg)](LICENSE)
 
-> Node.js SDK for Mixin Network, heavily inspired by [mixin-node](https://www.npmjs.com/package/mixin-node)
+> Node.js SDK for Mixin Network, heavily inspired by [mixin-node](https://www.npmjs.com/package/mixin-node), but is much more developer friendly
 
 ## Table of Contents
 
@@ -18,21 +18,14 @@
 
 ## Install
 
-[npm][]:
-
-```sh
-npm install mixin-node-sdk
-```
-
-[yarn][]:
-
 ```sh
 yarn add mixin-node-sdk
+# OR npm install mixin-node-sdk -S
 ```
 
 ## Usage
 
-### Create DApp
+### 1. Create DApp
 
 To use this library, first we need to create a DApp on [developers.mixin.one](https://developers.mixin.one), then obtain the following information as config:
 
@@ -47,9 +40,9 @@ const config = {
 };
 ```
 
-### HttpClient
+### 2. HttpClient
 
-Provide all API for mixin network and mixin messenger, such as pin/user/asset/snapshot.
+`HttpClient` provides wrapper for all API supported by mixin network and mixin messenger, such as pin/user/asset/snapshot:
 
 ```javascript
 const path = require('path');
@@ -69,7 +62,7 @@ const assetId = '965e5c6e-434c-3fa9-b780-c50f43cd955c'; // CNB
 })();
 ```
 
-Full API list:
+Full API list supported by `HttpClient`:
 
 - **getAssets**, get asset list owned by user
 - **getAsset**, get asset detail owned by user
@@ -98,11 +91,11 @@ Full API list:
 - **readConversation**, read conversation detail
 - **sendMessage**, send message to specific conversation
 
-**Working example code can be found [HERE](./examples/http.js)**
+**Working example for `HttpClient` can be found [HERE](./examples/http.js)**
 
-### SocketClient
+### 3. SocketClient
 
-> Provide basic wrapper for Mixin Messenger WebSocket Messages
+`SocketClient` provide basic wrapper for Mixin Messenger WebSocket Messages, you can use it to listen and react to socket messages.
 
 ```javascript
 const path = require('path');
@@ -124,7 +117,7 @@ socket.on(
 );
 ```
 
-**Working example code can be found [HERE](./examples/socket.js)**
+**Working example for `SocketClient` can be found [HERE](./examples/socket.js)**
 
 ### Debugging
 
@@ -144,8 +137,3 @@ DEBUG=MixinClient:* node examples/socket.js
 ## License
 
 [MIT](LICENSE) © wangshijun
-
-##
-
-[npm]: https://www.npmjs.com/
-[yarn]: https://yarnpkg.com/
