@@ -14,3 +14,5 @@ client.on(
     return Promise.resolve(message);
   })
 );
+
+client.on('error', err => console.error(err.message));
