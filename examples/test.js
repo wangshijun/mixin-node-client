@@ -1,5 +1,3 @@
-const fs = require('fs');
-const crypto = require('crypto');
 const { HttpClient, SocketClient } = require('../lib/index');
 const config = require('./config');
 const client = new HttpClient(config);
