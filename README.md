@@ -93,6 +93,23 @@ Full API list supported by `HttpClient`:
 
 **Working example for `HttpClient` can be found [HERE](./examples/http.js)**
 
+Because we can send messages to a conversation, `HttpClient` provide neat methods to send all kinds of message to Mixin Messenger:
+
+```javascript
+console.log(client.getMessageSenders());
+// [ 'sendText',
+//   'sendImage',
+//   'sendVideo',
+//   'sendData',
+//   'sendSticker',
+//   'sendContact',
+//   'sendButton',
+//   'sendButtons',
+//   'sendApp' ]
+```
+
+For syntax of sending messages, see working example [HERE](./examples/message.js).
+
 ### 3. SocketClient
 
 `SocketClient` provide basic wrapper for Mixin Messenger WebSocket Messages, you can use it to listen and react to socket messages.

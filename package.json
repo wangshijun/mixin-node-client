@@ -1,7 +1,7 @@
 {
   "name": "mixin-node-client",
   "description": "Node.js SDK for Mixin Network",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "author": "wangshijun <wangshijun2010@gmail.com>",
   "bugs": {
     "url": "https://github.com/wangshijun/mixin-node-client/issues",
@@ -12,6 +12,8 @@
   ],
   "dependencies": {
     "axios": "^0.18.0",
+    "camelcase": "^5.0.0",
+    "camelcase-keys": "^5.0.0",
     "int64-buffer": "^0.1.10",
     "interval-promise": "^1.3.0",
     "jsonwebtoken": "^8.3.0",
@@ -60,7 +62,7 @@
     "check-coverage": true,
     "lines": 5,
     "functions": 1,
-    "branches": 5,
+    "branches": 4,
     "reporter": [
       "lcov",
       "html",
@@ -105,6 +107,8 @@
       "promise/prefer-await-to-then": "off",
       "capitalized-comments": "off",
       "camelcase": "off",
+      "unicorn/import-index": "off",
+      "import/newline-after-import": "off",
       "no-warning-comments": "off"
     },
     "space": true
@@ -112,7 +116,7 @@
   "scripts": {
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov",
     "lint": "xo",
-    "precommit": "lint-staged && npm run test-coverage",
+    "precommit": "lint-staged && npm run test",
     "test": "npm run lint && npm run test-coverage",
     "test-coverage": "cross-env NODE_ENV=test nyc ava"
   }

@@ -790,6 +790,14 @@ camelcase-keys@^4.0.0:
     map-obj "^2.0.0"
     quick-lru "^1.0.0"
 
+camelcase-keys@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.npmjs.org/camelcase-keys/-/camelcase-keys-5.0.0.tgz#67250d1d2e6617ed0568463e56fa337845706695"
+  dependencies:
+    camelcase "^5.0.0"
+    map-obj "^3.0.0"
+    quick-lru "^1.0.0"
+
 camelcase@^1.0.2:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-1.2.1.tgz#9bb5304d2e0b56698b2c758b08a3eaa9daa58a39"
@@ -801,6 +809,10 @@ camelcase@^2.0.0:
 camelcase@^4.0.0, camelcase@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-4.1.0.tgz#d545635be1e33c542649c69173e5de6acfae34dd"
+
+camelcase@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.npmjs.org/camelcase/-/camelcase-5.0.0.tgz#03295527d58bd3cd4aa75363f35b2e8d97be2f42"
 
 capture-stack-trace@^1.0.0:
   version "1.0.0"
@@ -1003,7 +1015,6 @@ commondir@^1.0.1:
 complex.js@2.0.11:
   version "2.0.11"
   resolved "https://registry.npmjs.org/complex.js/-/complex.js-2.0.11.tgz#09a873fbf15ffd8c18c9c2201ccef425c32b8bf1"
-  integrity sha512-6IArJLApNtdg1P1dFtn3dnyzoZBEF0MwMnrfF1exSBRpZYoy4yieMkpZhQDC0uwctw48vii0CFVyHfpgZ/DfGw==
 
 component-emitter@^1.2.1:
   version "1.2.1"
@@ -1189,7 +1200,6 @@ decamelize@^1.0.0, decamelize@^1.1.0, decamelize@^1.1.1, decamelize@^1.1.2:
 decimal.js@10.0.1:
   version "10.0.1"
   resolved "https://registry.npmjs.org/decimal.js/-/decimal.js-10.0.1.tgz#d04b16b277f0f9af09671cee225c4882e8857c58"
-  integrity sha512-vklWB5C4Cj423xnaOtsUmAv0/7GqlXIgDv2ZKDyR64OV3OSzGHNx2mk4p/1EKnB5s70k73cIOOEcG9YzF0q4Lw==
 
 decode-uri-component@^0.2.0:
   version "0.2.0"
@@ -1342,7 +1352,6 @@ es6-error@^4.0.1, es6-error@^4.0.2:
 escape-latex@1.2.0:
   version "1.2.0"
   resolved "https://registry.npmjs.org/escape-latex/-/escape-latex-1.2.0.tgz#07c03818cf7dac250cce517f4fda1b001ef2bca1"
-  integrity sha512-nV5aVWW1K0wEiUIEdZ4erkGGH8mDxGyxSeqPzRNtWP7ataw+/olFObw7hujFWlVjNsaDFw5VZ5NzVSIqRgfTiw==
 
 escape-string-regexp@^1.0.2, escape-string-regexp@^1.0.4, escape-string-regexp@^1.0.5:
   version "1.0.5"
@@ -1801,7 +1810,6 @@ foreground-child@^1.5.3, foreground-child@^1.5.6:
 fraction.js@4.0.11:
   version "4.0.11"
   resolved "https://registry.npmjs.org/fraction.js/-/fraction.js-4.0.11.tgz#f82474349f7a198b6ad8d713d65621302a0e6f58"
-  integrity sha512-wyQd1A06dTom7vTkf8OsnqXNi5XjleeaDFrvQX3SDIyMsVN1eb8KSGH3fsckF5FMlSWBrMfDCcJWVf99rXbf/g==
 
 fragment-cache@^0.2.1:
   version "0.2.1"
@@ -2190,7 +2198,6 @@ int64-buffer@^0.1.10:
 interval-promise@^1.3.0:
   version "1.3.0"
   resolved "https://registry.npmjs.org/interval-promise/-/interval-promise-1.3.0.tgz#26fc4fbcd18605162d0dd012c2cc5657c4f8bc22"
-  integrity sha512-AebPZJ0o6D1jWg487njjrhfzBp6/hfmtWCMQhXr0SXD7Zg5RexQe4Y6joYiGieJziP7W7WEMQWxFKSbywXmhbw==
 
 invariant@^2.2.2:
   version "2.2.4"
@@ -2548,7 +2555,6 @@ istanbul-reports@^1.4.0:
 javascript-natural-sort@0.7.1:
   version "0.7.1"
   resolved "https://registry.npmjs.org/javascript-natural-sort/-/javascript-natural-sort-0.7.1.tgz#f9e2303d4507f6d74355a73664d1440fb5a0ef59"
-  integrity sha1-+eIwPUUH9tdDVac2ZNFED7Wg71k=
 
 jest-docblock@^21.0.0:
   version "21.2.0"
@@ -2959,6 +2965,10 @@ map-obj@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/map-obj/-/map-obj-2.0.0.tgz#a65cd29087a92598b8791257a523e021222ac1f9"
 
+map-obj@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.npmjs.org/map-obj/-/map-obj-3.0.0.tgz#4221cc62360f88c0735f9e7c0813bd889657f490"
+
 map-visit@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/map-visit/-/map-visit-1.0.0.tgz#ecdca8f13144e660f1b5bd41f12f3479d98dfb8f"
@@ -2978,7 +2988,6 @@ math-random@^1.0.1:
 mathjs@^5.1.1:
   version "5.3.0"
   resolved "https://registry.npmjs.org/mathjs/-/mathjs-5.3.0.tgz#07aa0863ae26d342f4c2351cee8ac8deb70a62cc"
-  integrity sha512-4DSk2A3WpAEgKND49nGNwzhVm0ZvCJJkzwcJjC3Dum/jstG7/iMPHW8ni4V7Gm7jQOhs7zsoqocFKXXU1E1kig==
   dependencies:
     complex.js "2.0.11"
     decimal.js "10.0.1"
@@ -3958,7 +3967,6 @@ ret@~0.1.10:
 rfc3339nano@^1.0.2:
   version "1.0.2"
   resolved "https://registry.npmjs.org/rfc3339nano/-/rfc3339nano-1.0.2.tgz#7fad60c2d336f386278a03d6978607fad99c3b43"
-  integrity sha512-uVJjSgDAEhMteRUoOOEkn7VLbcxiPWUyZID52QJ141YNvdnd8jOnlLyEaZBCcntZ8WIQbNrOzOeC7VHyZowejQ==
   dependencies:
     mathjs "^5.1.1"
 
@@ -4017,7 +4025,6 @@ sax@^1.2.4:
 seed-random@2.2.0:
   version "2.2.0"
   resolved "https://registry.npmjs.org/seed-random/-/seed-random-2.2.0.tgz#2a9b19e250a817099231a5b99a4daf80b7fbed54"
-  integrity sha1-KpsZ4lCoFwmSMaW5mk2vgLf77VQ=
 
 semver-diff@^2.0.0:
   version "2.1.0"
@@ -4415,7 +4422,6 @@ timed-out@^4.0.0:
 tiny-emitter@2.0.2:
   version "2.0.2"
   resolved "https://registry.npmjs.org/tiny-emitter/-/tiny-emitter-2.0.2.tgz#82d27468aca5ade8e5fd1e6d22b57dd43ebdfb7c"
-  integrity sha512-2NM0auVBGft5tee/OxP4PI3d8WItkDM+fPnaRAVo6xTDI2knbz9eC5ArWGqtGlYqiH3RU5yMpdyTTO7MguC4ow==
 
 tmp@^0.0.33:
   version "0.0.33"
@@ -4474,7 +4480,6 @@ type-check@~0.3.2:
 typed-function@1.1.0:
   version "1.1.0"
   resolved "https://registry.npmjs.org/typed-function/-/typed-function-1.1.0.tgz#ea149706e0fb42aca1791c053a6d94ccd6c4fdcb"
-  integrity sha512-TuQzwiT4DDg19beHam3E66oRXhyqlyfgjHB/5fcvsRXbfmWPJfto9B4a0TBdTrQAPGlGmXh/k7iUI+WsObgORA==
 
 typedarray@^0.0.6:
   version "0.0.6"
@@ -4667,7 +4672,6 @@ write@^0.2.1:
 ws@^6.1.2:
   version "6.1.2"
   resolved "https://registry.npmjs.org/ws/-/ws-6.1.2.tgz#3cc7462e98792f0ac679424148903ded3b9c3ad8"
-  integrity sha512-rfUqzvz0WxmSXtJpPMX2EeASXabOrSMk1ruMOV3JBTBjo4ac2lDjGGsbQSyxj8Odhw5fBib8ZKEjDNvgouNKYw==
   dependencies:
     async-limiter "~1.0.0"
 

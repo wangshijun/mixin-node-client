@@ -1,4 +1,4 @@
-const { HttpClient } = require('../lib/index');
+const { HttpClient } = require('../');
 const config = require('./config');
 const client = new HttpClient(config);
 
