@@ -1,6 +1,8 @@
-const { SocketClient } = require('../lib/index');
+const { SocketClient } = require('../');
 const config = require('./config');
 const client = new SocketClient(config);
+
+console.log('Supported MessageSenders by SocketClient', client.getMessageSenders());
 
 // Listen and react to socket messages
 client.on(
