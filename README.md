@@ -27,16 +27,25 @@ yarn add mixin-node-sdk
 
 ### 1. Create DApp
 
-To use this library, first we need to create a DApp on [developers.mixin.one](https://developers.mixin.one), then obtain the following information as config:
+Steps to use [mixin-node-client](https://github.com/wangshijun/mixin-node-client) in you dapp:
+
+1. Create a dapp on [developers.mixin.one](https://developers.mixin.one), get clientId and clientSecret(the result when **Click to generate a new secret**)
+2. Generate config from a new session info of your dapp (the result when **Click to generate a new session**) using [mixin-cli](https://github.com/wangshijun/mixin-cli) (**a command line tool by me**).
+
+Config file format, **remember to replace `clientId` and `clientSecret` with yours**:
 
 ```javascript
-const config = {
-  clientId: '1946399e-4303-4c44-bbe8-6fb39f82bdf9',
-  clientSecret: '8bb1734940a4a95d7edd0393c18d848f298b3d3099a274876da57877736b067e',
-  aesKey: 'hB/M96xzZRcda2iYklIBKE9pqwxQxl+nHsChqcWpl2M=',
-  assetPin: '123456',
-  sessionId: '28b8dc2a-5df6-4ead-8c7e-5af61fe7f27d',
-  privateKey: path.join(__dirname, './private.key'),
+// Generated with awesome https://github.com/wangshijun/mixin-cli
+module.exports = {
+  clientId: '<PUT YOUR DAPP CLIENT_ID HERE>',
+  clientSecret: '<PUT YOUR DAPP CLIENT_SECRET HERE>',
+  assetPin: '310012',
+  sessionId: '621c905b-1739-45e7-b668-b5531dd83646',
+  aesKey: '56GcGs2EFHBPV2Xsb/OiwLdgjGt3q53JcFeLmbUutEk=',
+  privateKey: `-----BEGIN RSA PRIVATE KEY-----
+MIICXAIBAAKBgQCsNaGbDx1UeKrTux01nC6R7/bu2GUELe6Q2mBSPymkZW2fpiaO
+FjkTI1MkEE8Eq1kGm/+6vAP84LMXG/W49UqZTBkKkrQ=
+-----END RSA PRIVATE KEY-----`,
 };
 ```
 
@@ -45,8 +54,8 @@ const config = {
 `HttpClient` provides wrapper for all API supported by mixin network and mixin messenger, such as pin/user/asset/snapshot:
 
 ```javascript
-const path = require('path');
 const { HttpClient } = require('mixin-node-sdk');
+const config = require('./config');
 
 const client = new HttpClient(config);
 
@@ -89,9 +98,11 @@ Full API list supported by `HttpClient`:
 - **getContacts**, get contact list
 - **createConversation**, create new conversation
 - **readConversation**, read conversation detail
-- **sendMessage**, send message to specific conversation
+- **sendMessage**, send raw message to specific conversation, see next section for message sender util.
 
 **Working example for `HttpClient` can be found [HERE](./examples/http.js)**
+
+#### Message Sender Util
 
 Because we can send messages to a conversation, `HttpClient` provide neat methods to send all kinds of message to Mixin Messenger:
 
@@ -106,6 +117,14 @@ console.log(client.getMessageSenders());
 //   'sendButton',
 //   'sendButtons',
 //   'sendApp' ]
+const text = await client.sendText({
+  conversationId: conversation.conversation_id,
+  data: 'Hello from node.js new client sdk',
+});
+const button = await client.sendButton({
+  conversationId: conversation.conversation_id,
+  data: { label: 'Open Mixin', color: '#FF0000', action: 'https://mixin.one' },
+});
 ```
 
 For syntax of sending messages, see working example [HERE](./examples/message.js).
@@ -115,8 +134,8 @@ For syntax of sending messages, see working example [HERE](./examples/message.js
 `SocketClient` provide basic wrapper for Mixin Messenger WebSocket Messages, you can use it to listen and react to socket messages.
 
 ```javascript
-const path = require('path');
 const { SocketClient } = require('mixin-node-sdk');
+const config = require('./config');
 
 const client = new SocketClient(config);
 
@@ -135,6 +154,13 @@ socket.on(
 ```
 
 **Working example for `SocketClient` can be found [HERE](./examples/socket.js)**
+
+Same set of message sender utils are also supported by `SocketClient` (**Note**: parameters are different for message sender utils of `HttpClient` and `SocketClient`, because we have the conversationId from the `onMessage` callback):
+
+```javascript
+socket.sendText('Hi there!', message);
+socket.sendButton({ label: 'Open Mixin', color: '#FF0000', action: 'https://mixin.one' }, message);
+```
 
 ### Debugging
 
