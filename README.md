@@ -25,9 +25,9 @@ yarn add mixin-node-sdk
 
 ## Usage
 
-### 1. Create DApp
+### 1. Generate Config
 
-Steps to use [mixin-node-client](https://github.com/wangshijun/mixin-node-client) in you dapp:
+Steps to use generate config for dapp:
 
 1. Create a dapp on [developers.mixin.one](https://developers.mixin.one), get clientId and clientSecret(the result when **Click to generate a new secret**)
 2. Generate config from a new session info of your dapp (the result when **Click to generate a new session**) using [mixin-cli](https://github.com/wangshijun/mixin-cli) (**a command line tool by me**).
