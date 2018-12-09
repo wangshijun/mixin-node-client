@@ -1,10 +1,23 @@
-const path = require('path');
-
+// NOTE: please update this config file with your own
 module.exports = {
   clientId: '1946399e-4303-4c44-bbe8-6fb39f82bdf9',
   clientSecret: '8bb1734940a4a95d7edd0393c18d848f298b3d3099a274876da57877736b067e',
   aesKey: 'hB/M96xzZRcda2iYklIBKE9pqwxQxl+nHsChqcWpl2M=',
   assetPin: '123456',
   sessionId: '28b8dc2a-5df6-4ead-8c7e-5af61fe7f27d',
-  privateKey: path.join(__dirname, './mixin.key'),
+  privateKey: `-----BEGIN RSA PRIVATE KEY-----
+MIICXAIBAAKBgQCOKr6amLfHj3Hz17DEs3KGfdUtndcorT8eQvfmOi2pS2dvG5+i
+mmMspnnpZ/wKKYUS4FIeUQABmr3etH2eCW6QBkn1KrLGyzgO2i66gHM8+7ucTnyM
+Altbyb8zAHY8y2AK+2fMu/kuJfaCMJ2Fo9zeUqWhXSJCs8LYGMzy9u5QzwIDAQAB
+AoGBAIdZ5MwVF+uUA16vfKlZW3D2Pk7G1sDwaIZsJc54l1513s0mlI5fxIoPGUSB
+7rDSJNL65NPeNE5Sv/BXEL20pyBilaHv8MWQLiG9wUf4H1dSqeg2F2LzHDzV7f1i
+EWVvRmfOzvPxzi9chEVr5Qj8fzxFX+x0mf9wy7ikHOcWGn8RAkEA3hWLY+mO5Evb
+N6N9WoSgKOVp6WJJu7/7Y4quE8PlFGEBdW+9Tr4l8A5KyKljE5zXa5heDbVEefGj
+Y2ZNwLLyVwJBAKPgz30tXSLQV+esZ1c17WArCXf0/wondjvxJPQeo/oFkZQWiJDK
+Mp6KYzuEd5GykHQhBODkV4nY+qUnxqJMukkCQDQ5Fr0Y5+wRVmxf+pM1ir/zKpOh
+9Dq9K2096C9nqk+/e+tUqkyA9ETd54IGKvEquZFok/1fOcn/I2+1V+VPbyMCQH5n
+rsQYVKnA2L1Ln16GqzWtnJ0ZrguwCqQLynw+ki8NUpBOnUJJpKfjiM1kzTHl8USS
+H4g0uU0Lv7Har32K/3kCQE1HoOltfPFx6Kh/sw3S3R4yN0brbtikFM/TYg1RNuo/
+U4dKTBpN8wxz/UFtXz2Fxf1Fj98aVyW1ew9VLo090Lw=
+-----END RSA PRIVATE KEY-----`,
 };
