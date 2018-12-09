@@ -1,4 +1,4 @@
-const { SocketClient } = require('../');
+const { SocketClient, isMessageType } = require('../');
 const config = require('./config');
 const client = new SocketClient(config);
 
@@ -9,7 +9,37 @@ client.on(
   'message',
   client.getMessageHandler(message => {
     console.log('Message Received', message);
-    if (message.data && message.data.category === 'PLAIN_TEXT' && message.data.data.toLowerCase() === 'hi') {
+
+    if (isMessageType(message, 'text')) {
+      const text = message.data.data.toLowerCase();
+      if (text === 'button') {
+        return client.sendButton(
+          {
+            label: 'Open Node.js Client SDK',
+            color: '#FF0000',
+            action: 'https://github.com/wangshijun/mixin-node-client',
+          },
+          message
+        );
+      }
+
+      if (text === 'contact') {
+        return client.sendContact('7701e7bf-2a86-4655-982e-023564fa8945', message);
+      }
+
+      if (text === 'app') {
+        return client.sendApp(
+          {
+            icon_url:
+              'https://images.mixin.one/PQ2dYjNNXYYCCcSi_jDxrh0PJM8XBaiwu4I5_5e7tJhpQNbCVULnc5VRzR4AHF2e7AK6mVpvaHxO0EZr24cUjbg=s256',
+            title: 'Mixin Node.js SDK',
+            description: 'Utilities to easy Mixin dapp development',
+            action: 'https://github.com/wangshijun/mixin-node-client',
+          },
+          message
+        );
+      }
+
       return client.sendText('Hi there!', message);
     }
 

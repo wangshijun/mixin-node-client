@@ -33,7 +33,7 @@ console.log('Supported MessageSenders by HttpClient', client.getMessageSenders()
           'https://images.mixin.one/PQ2dYjNNXYYCCcSi_jDxrh0PJM8XBaiwu4I5_5e7tJhpQNbCVULnc5VRzR4AHF2e7AK6mVpvaHxO0EZr24cUjbg=s256',
         title: '福来红包DEV',
         description: '方便好用的红包发送工具',
-        action: 'https://www.baidu.com',
+        action: 'https://github.com/wangshijun/mixin-node-client',
       },
     });
     const image = await client.sendImage({
