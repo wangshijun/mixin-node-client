@@ -1,4 +1,4 @@
-# mixin-node-sdk
+# mixin-node-client
 
 [![build status](https://img.shields.io/travis/wangshijun/mixin-node-sdk.svg)](https://travis-ci.org/wangshijun/mixin-node-sdk)
 [![code coverage](https://img.shields.io/codecov/c/github/wangshijun/mixin-node-sdk.svg)](https://codecov.io/gh/wangshijun/mixin-node-sdk)
@@ -19,8 +19,8 @@
 ## Install
 
 ```sh
-yarn add mixin-node-sdk
-# OR npm install mixin-node-sdk -S
+yarn add mixin-node-client
+# OR npm install mixin-node-client -S
 ```
 
 ## Usage
@@ -54,7 +54,7 @@ FjkTI1MkEE8Eq1kGm/+6vAP84LMXG/W49UqZTBkKkrQ=
 `HttpClient` provides wrapper for all API supported by mixin network and mixin messenger, such as pin/user/asset/snapshot:
 
 ```javascript
-const { HttpClient } = require('mixin-node-sdk');
+const { HttpClient } = require('mixin-node-client');
 const config = require('./config');
 
 const client = new HttpClient(config);
@@ -134,7 +134,7 @@ For syntax of sending messages, see working example [HERE](./examples/message.js
 `SocketClient` provide basic wrapper for Mixin Messenger WebSocket Messages, you can use it to listen and react to socket messages.
 
 ```javascript
-const { SocketClient } = require('mixin-node-sdk');
+const { SocketClient } = require('mixin-node-client');
 const config = require('./config');
 
 const client = new SocketClient(config);
