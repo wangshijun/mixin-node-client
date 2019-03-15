@@ -82,6 +82,16 @@ declare class SocketClient_1 extends MixinClient {
   start(): void;
   destroy(): void;
   sendRaw(message: any): Promise<any>;
+  sendText(params: any): Promise<any>;
+  sendImage(params: any): Promise<any>;
+  sendVideo(params: any): Promise<any>;
+  sendData(params: any): Promise<any>;
+  sendSticker(params: any): Promise<any>;
+  sendContact(params: any): Promise<any>;
+  sendButton(params: any): Promise<any>;
+  sendButtons(params: any): Promise<any>;
+  sendApp(params: any): Promise<any>;
+
   /**
    * Wrap a message handler to auto confirm message recipient after handling
    * @param {*} messageId
