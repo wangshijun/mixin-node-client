@@ -73,10 +73,10 @@ const assetId = '965e5c6e-434c-3fa9-b780-c50f43cd955c'; // CNB
 
 Full API list supported by `HttpClient`:
 
-- **getAssets**, get asset list owned by user
-- **getAsset**, get asset detail owned by user
-- **getTopAssets**, get top asset list by mixin network
-- **getTopAsset**, get top asset detail by mixin network
+- **getUserAssets**, get asset list owned by user
+- **getUserAsset**, get asset detail owned by user
+- **getNetworkAssets**, get top asset list by mixin network
+- **getNetworkAsset**, get top asset detail by mixin network
 - **getWithdrawAddress**, get withdraw address
 - **createWithdrawAddress**, create withdraw address
 - **deleteWithdrawAddress**, delete withdraw address
