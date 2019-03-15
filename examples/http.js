@@ -13,10 +13,10 @@ console.log('Supported Endpoints by HttpClient', client.getEndpoints());
 (async () => {
   try {
     // asset related
-    const assets = await client.getAssets();
-    const asset = await client.getAsset(assetId);
-    const topAssets = await client.getTopAssets();
-    const topAsset = await client.getTopAsset(assetId);
+    const assets = await client.getUserAssets();
+    const asset = await client.getUserAsset(assetId);
+    const topAssets = await client.getNetworkAssets();
+    const topAsset = await client.getNetworkAsset(assetId);
     console.log({ assets, asset, topAssets, topAsset });
 
     // pin verify/update/create
