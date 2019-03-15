@@ -34,6 +34,7 @@
     "eslint-config-prettier": "latest",
     "eslint-plugin-prettier": "latest",
     "husky": "^0.14.3",
+    "js2dts": "^0.3.2",
     "lint-staged": "^4.0.4",
     "nyc": "^11.1.0",
     "prettier": "^1.6.1",
@@ -118,6 +119,7 @@
     "lint": "xo",
     "precommit": "lint-staged && npm run test",
     "test": "npm run lint && npm run test-coverage",
+    "generate-dts": "j2d lib/index.js && ./tools/patch-dts.sh && node tools/generate-dts.js",
     "test-coverage": "cross-env NODE_ENV=test nyc ava"
   }
 }
