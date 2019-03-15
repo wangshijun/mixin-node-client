@@ -118,6 +118,7 @@
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov",
     "lint": "xo",
     "precommit": "lint-staged && npm run test",
+    "prepublish": "npm run generate-dts",
     "test": "npm run lint && npm run test-coverage",
     "generate-dts": "j2d lib/index.js && ./tools/patch-dts.sh && node tools/generate-dts.js",
     "test-coverage": "cross-env NODE_ENV=test nyc ava"
