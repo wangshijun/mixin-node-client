@@ -1,3 +1,4 @@
+/* eslint unicorn/no-process-exit:"off" */
 const fs = require('fs');
 const path = require('path');
 const { HttpClient, SocketClient } = require('../lib/index');
@@ -9,8 +10,9 @@ const httpMethods = client.getEndpoints().map(x => `${x}(params:any): Promise<an
 const socketMethods = socket.getMessageSenders().map(x => `${x}(params:any): Promise<any>;`);
 const filePath = path.join(__dirname, '../lib/index.d.ts');
 let fileContent = fs.readFileSync(filePath).toString();
-fileContent = fileContent.replace(/__HttpClientMethods__/, `\n${httpMethods.join('\n')}\n`);
+fileContent = fileContent.replace(/__HttpClientMethods__/, `\n${httpMethods.concat(socketMethods).join('\n')}\n`);
 fileContent = fileContent.replace(/__SocketClientMethods__/, `\n${socketMethods.join('\n')}\n`);
 fs.writeFileSync(filePath, fileContent);
 
 console.log('dts file written', filePath);
+process.exit(0);

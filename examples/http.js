@@ -38,6 +38,7 @@ console.log('Supported Endpoints by HttpClient', client.getEndpoints());
       amount: 100,
       memo: 'test from mixin-node-client',
     });
+
     const deleteAddress = await client.deleteWithdrawAddress(withdrawAddress.address_id);
     console.log({ depositAddress, withdrawAddress, addressList, withdrawResult, deleteAddress });
 
@@ -72,7 +73,7 @@ console.log('Supported Endpoints by HttpClient', client.getEndpoints());
       category: 'PLAIN_TEXT',
       conversationId: conversation.conversation_id,
       recipientId: senderId,
-      message: 'Hello from node.js new client sdk',
+      data: Buffer.from('Hello from node.js new client sdk').toString('base64'),
     });
     console.log({ conversation, group, message });
 
@@ -89,6 +90,7 @@ console.log('Supported Endpoints by HttpClient', client.getEndpoints());
     const contacts = await client.getContacts();
     console.log({ profile, friends, user, users, contacts });
   } catch (err) {
-    console.error(err);
+    console.error('error', err);
+    console.trace(err);
   }
 })();

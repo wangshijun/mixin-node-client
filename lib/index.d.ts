@@ -64,6 +64,15 @@ declare class HttpClient_1 extends MixinClient {
   createConversation(params: any): Promise<any>;
   readConversation(params: any): Promise<any>;
   sendMessage(params: any): Promise<any>;
+  sendText(params: any): Promise<any>;
+  sendImage(params: any): Promise<any>;
+  sendVideo(params: any): Promise<any>;
+  sendData(params: any): Promise<any>;
+  sendSticker(params: any): Promise<any>;
+  sendContact(params: any): Promise<any>;
+  sendButton(params: any): Promise<any>;
+  sendButtons(params: any): Promise<any>;
+  sendApp(params: any): Promise<any>;
 
   transferFromBot(T102: T103): Promise<any>;
 }
