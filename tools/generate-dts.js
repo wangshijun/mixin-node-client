@@ -8,6 +8,7 @@ const socket = new SocketClient(config);
 
 const httpMethods = client.getEndpoints().map(x => `${x}(params:any): Promise<any>;`);
 const socketMethods = socket.getMessageSenders().map(x => `${x}(params:any): Promise<any>;`);
+console.log({ httpMethods, socketMethods });
 const filePath = path.join(__dirname, '../lib/index.d.ts');
 let fileContent = fs.readFileSync(filePath).toString();
 fileContent = fileContent.replace(/__HttpClientMethods__/, `\n${httpMethods.concat(socketMethods).join('\n')}\n`);
