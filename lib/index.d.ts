@@ -1,40 +1,5 @@
-declare class EventEmitter_1 {
-  addListener(event: string | any, listener: (...args: any[]) => void): any;
-  on(event: string | any, listener: (...args: any[]) => void): any;
-  once(event: string | any, listener: (...args: any[]) => void): any;
-  removeListener(event: string | any, listener: (...args: any[]) => void): any;
-  off(event: string | any, listener: (...args: any[]) => void): any;
-  removeAllListeners(event?: string | any): any;
-  setMaxListeners(n: number): any;
-  getMaxListeners(): number;
-  listeners(event: string | any): (...args: any[]) => any[];
-  rawListeners(event: string | any): (...args: any[]) => any[];
-  emit(event: string | any, ...args: any[]): boolean;
-  listenerCount(type: string | any): number;
-  prependListener(event: string | any, listener: (...args: any[]) => void): any;
-  prependOnceListener(event: string | any, listener: (...args: any[]) => void): any;
-  eventNames(): Array<string | any>;
-}
-declare class internal extends EventEmitter_1 {}
-declare class EventEmitter extends internal {
-  /** @deprecated since v4.0.0 */
-  static listenerCount(emitter: EventEmitter, event: string | any): number;
-  static defaultMaxListeners: number;
-  addListener(event: string | any, listener: (...args: any[]) => void): any;
-  on(event: string | any, listener: (...args: any[]) => void): any;
-  once(event: string | any, listener: (...args: any[]) => void): any;
-  prependListener(event: string | any, listener: (...args: any[]) => void): any;
-  prependOnceListener(event: string | any, listener: (...args: any[]) => void): any;
-  removeListener(event: string | any, listener: (...args: any[]) => void): any;
-  off(event: string | any, listener: (...args: any[]) => void): any;
-  removeAllListeners(event?: string | any): any;
-  setMaxListeners(n: number): any;
-  getMaxListeners(): number;
-  listeners(event: string | any): (...args: any[]) => any[];
-  rawListeners(event: string | any): (...args: any[]) => any[];
-  emit(event: string | any, ...args: any[]): boolean;
-  eventNames(): Array<string | any>;
-}
+// Generate by [js2dts@0.3.2](https://github.com/whxaxes/js2dts#readme)
+
 export interface T101 {
   clientId: any;
   clientSecret: any;
@@ -45,7 +10,7 @@ export interface T101 {
   shareSecret?: string;
   timeout?: number;
 }
-declare class MixinClient extends EventEmitter {
+declare class MixinClient {
   clientId: any;
   clientSecret: any;
   assetPin: any;
@@ -55,11 +20,11 @@ declare class MixinClient extends EventEmitter {
   shareSecret: string;
   privateKey: any;
   constructor(T100: T101);
-  getEncryptedPin(assetPin: any): string;
+  getEncryptedPin(assetPin: any): any;
   getUUID(): string;
   validateUUID(uuid: any): boolean;
   getConversationId(userId: any, recipientId: any): string;
-  getRequestSignature(method: any, uri: any, body: any): string;
+  getRequestSignature(method: any, uri: any, body: any): any;
   getJwtToken(method: any, uri: any, body: any): any;
   getEndpoints(): any;
   getMessageSenders(): any;
@@ -100,6 +65,7 @@ declare class HttpClient_1 extends MixinClient {
   createConversation(params: any): Promise<any>;
   readConversation(params: any): Promise<any>;
   sendMessage(params: any): Promise<any>;
+  createUser(params: any): Promise<any>;
   sendText(params: any): Promise<any>;
   sendImage(params: any): Promise<any>;
   sendVideo(params: any): Promise<any>;

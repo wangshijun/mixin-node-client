@@ -92,6 +92,7 @@ Full API list supported by `HttpClient`:
 - **getProfile**, get user profile
 - **updatePreference**, update user preference
 - **updateProfile**, update user profile
+- **createUser**, create user
 - **getUser**, get user by id
 - **getUsers**, get multiple users by id
 - **getFriends**, get friend list
