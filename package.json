@@ -61,9 +61,9 @@
   "main": "lib/index.js",
   "nyc": {
     "check-coverage": true,
-    "lines": 5,
-    "functions": 1,
-    "branches": 3,
+    "lines": 40,
+    "functions": 25,
+    "branches": 20,
     "reporter": [
       "lcov",
       "html",
