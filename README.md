@@ -168,9 +168,9 @@ socket.sendButton({ label: 'Open Mixin', color: '#FF0000', action: 'https://mixi
 If you are curious what happened during each API call, try run example code with following command:
 
 ```bash
-DEBUG=MixinClient:* node examples/http.js
-DEBUG=MixinClient:* node examples/socket.js
-DEBUG=MixinClient:* node examples/message.js
+DEBUG=mixin-node-client:* node examples/http.js
+DEBUG=mixin-node-client:* node examples/socket.js
+DEBUG=mixin-node-client:* node examples/message.js
 ```
 
 The mixin dapp included in the examples folder can be found with the following qrcode:
