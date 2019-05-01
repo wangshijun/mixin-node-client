@@ -8,7 +8,11 @@ const senderId = '7701e7bf-2a86-4655-982e-023564fa8945'; // UserID
 const assetId = '965e5c6e-434c-3fa9-b780-c50f43cd955c'; // CNB
 
 test('should returns itself', t => {
+  const endpoints = client.getEndpoints();
+  const senders = client.getMessageSenders();
   t.true(client instanceof HttpClient);
+  t.true(Array.isArray(endpoints) && endpoints.length > 0);
+  t.true(Array.isArray(senders) && senders.length > 0);
 });
 
 test('should generate and validate uuid', t => {
