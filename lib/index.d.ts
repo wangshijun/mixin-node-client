@@ -7,7 +7,6 @@ export interface T101 {
   aesKey: any;
   sessionId: any;
   privateKey: any;
-  shareSecret?: string;
   timeout?: number;
 }
 declare class MixinClient {
@@ -17,7 +16,6 @@ declare class MixinClient {
   aesKey: any;
   sessionId: any;
   timeout: number;
-  shareSecret: string;
   privateKey: any;
   constructor(T100: T101);
   getEncryptedPin(assetPin: any): any;
@@ -79,7 +77,7 @@ declare class HttpClient_1 extends MixinClient {
   /**
    * Transfer from dapp to mixin messenger user
    *
-   * @param {Object} { assetId, recipientId, amount, memo = '' }
+   * @param {Object} { assetId, recipientId, traceId, amount, memo = '' }
    * @returns Promise<object>
    * @memberof HttpClient
    */
