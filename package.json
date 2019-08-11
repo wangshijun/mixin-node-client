@@ -11,7 +11,7 @@
     "wangshijun <wangshijun2010@gmail.com>"
   ],
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.19.0",
     "camelcase": "^5.0.0",
     "camelcase-keys": "^5.0.0",
     "int64-buffer": "^0.1.10",
