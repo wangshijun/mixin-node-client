@@ -17,6 +17,7 @@
     "int64-buffer": "^0.1.10",
     "interval-promise": "^1.3.0",
     "jsonwebtoken": "^8.3.0",
+    "nanoseconds": "^1.0.1",
     "rfc3339nano": "^1.0.2",
     "strformat": "^0.0.7",
     "ws": "^6.1.2"
