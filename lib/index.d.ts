@@ -37,43 +37,6 @@ declare class HttpClient_1 extends MixinClient {
    * @memberof HttpClient
    */
   getOAuthToken(code: string): Promise<any>;
-getUserAssets(params:any): Promise<any>;
-getUserAsset(params:any): Promise<any>;
-getNetworkAssets(params:any): Promise<any>;
-getNetworkAsset(params:any): Promise<any>;
-getWithdrawAddress(params:any): Promise<any>;
-createWithdrawAddress(params:any): Promise<any>;
-deleteWithdrawAddress(params:any): Promise<any>;
-withdraw(params:any): Promise<any>;
-deposit(params:any): Promise<any>;
-getSnapshots(params:any): Promise<any>;
-getSnapshot(params:any): Promise<any>;
-verifyPin(params:any): Promise<any>;
-updatePin(params:any): Promise<any>;
-createTransfer(params:any): Promise<any>;
-getTransfer(params:any): Promise<any>;
-verifyPayment(params:any): Promise<any>;
-getProfile(params:any): Promise<any>;
-updatePreference(params:any): Promise<any>;
-updateProfile(params:any): Promise<any>;
-getUser(params:any): Promise<any>;
-getUsers(params:any): Promise<any>;
-getFriends(params:any): Promise<any>;
-getContacts(params:any): Promise<any>;
-createConversation(params:any): Promise<any>;
-readConversation(params:any): Promise<any>;
-sendMessage(params:any): Promise<any>;
-createUser(params:any): Promise<any>;
-sendText(params:any): Promise<any>;
-sendImage(params:any): Promise<any>;
-sendVideo(params:any): Promise<any>;
-sendData(params:any): Promise<any>;
-sendSticker(params:any): Promise<any>;
-sendContact(params:any): Promise<any>;
-sendButton(params:any): Promise<any>;
-sendButtons(params:any): Promise<any>;
-sendApp(params:any): Promise<any>;
-
   /**
    * Transfer from dapp to mixin messenger user
    *
@@ -98,16 +61,6 @@ declare class SocketClient_1 extends MixinClient {
   start(): void;
   destroy(): void;
   sendRaw(message: any): Promise<any>;
-sendText(params:any): Promise<any>;
-sendImage(params:any): Promise<any>;
-sendVideo(params:any): Promise<any>;
-sendData(params:any): Promise<any>;
-sendSticker(params:any): Promise<any>;
-sendContact(params:any): Promise<any>;
-sendButton(params:any): Promise<any>;
-sendButtons(params:any): Promise<any>;
-sendApp(params:any): Promise<any>;
-
   /**
    * Wrap a message handler to auto confirm message recipient after handling
    * @param {*} messageId
