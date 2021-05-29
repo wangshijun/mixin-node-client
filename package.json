@@ -21,7 +21,7 @@
     "nano-time": "^1.0.0",
     "rfc3339nano": "^1.0.2",
     "strformat": "^0.0.7",
-    "ws": "^6.1.2"
+    "ws": "^7.4.6"
   },
   "ava": {
     "failFast": true,
